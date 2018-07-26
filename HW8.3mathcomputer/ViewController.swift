@@ -16,5 +16,29 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var moneyTextField: UITextField!
+    @IBOutlet weak var kiloTextField: UITextField!
+    @IBOutlet weak var outputTextField: UITextView!
+    
+    @IBAction func additionButton(_ sender: UIButton) {
+        outputTextField.font?.withSize(30.0)
+        outputTextField.text = "總共是：\(String( Double(moneyTextField.text!)! + Double(kiloTextField.text!)!))"
+    }
+    
+    @IBAction func subtractionButton(_ sender: UIButton) {
+        outputTextField.font?.withSize(30.0)
+        outputTextField.text = "總共是：\(String( Double(moneyTextField.text!)! - Double(kiloTextField.text!)!))"
+    }
+    
+    @IBAction func mutiplicationButton(_ sender: UIButton) {
+        outputTextField.font?.withSize(30.0)
+        outputTextField.text = "總共是：\(String( Double(moneyTextField.text!)! * Double(kiloTextField.text!)!))"
+    }
+    
+    @IBAction func divisionButton(_ sender: UIButton) {
+        outputTextField.font?.withSize(30.0)
+        outputTextField.text = "總共是：\(String( Double(moneyTextField.text!)! / Double(kiloTextField.text!)!))"
+    }
+    
 }
 
